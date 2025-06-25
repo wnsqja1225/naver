@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+  <meta http-equiv="refresh" content="1;url=#" /> <!-- Fallback -->
+  <script>
+    // 고정 값 (필요시 변경 가능)
+    const query = '오페라글라스';
+    const mid = '85028967433';
+    const encodedQuery = encodeURIComponent(query);
+    const timestamp = Date.now();
+
+    // 리디렉션 URL
+    const redirectUrl = `https://search.naver.com/p/crd/rd?` +
+      `m=1&px=1184&py=2137&sx=1184&sy=437&vw=2346&vh=1043&bw=672&bh=1051&bx=570&by=602` +
+      `&p=jaYAUsqo1aVssLmAO%2BKssssssM0-168911` +
+      `&q=${encodedQuery}` +
+      `&ie=utf8&rev=1&ssc=tab.nx.all&f=nexearch&w=nexearch` +
+      `&s=vmI%2B9WRBBDLTrdQneJnqGA%3D%3D` +
+      `&time=${timestamp}` + // 실시간 타임스탬프 반영
+      `&abt=%5B%7B%22eid%22%3A%22SURF-AD%22%2C%22vid%22%3A%2211%22%7D%2C%7B%22eid%22%3A%22SHP-BND-UI%22%2C%22vid%22%3A%223%22%7D%5D` +
+      `&a=shp_gui*a.outtit` +
+      `&u=${encodeURIComponent(`https://cr3.shopping.naver.com/v2/bridge/searchGate?nv_mid=${mid}&cat_id=50002010&query=${encodedQuery}&t=mcbw6qz1&h=4bd0256fd2c1bb40879aa5817580a8c513b5cb06&frm=NVSCPRO`)}` +
+      `&r=6&i=00000009_0013cc1f1409&cr=2`;
+
+    // 자동 이동
+    window.onload = () => {
+      window.location.href = redirectUrl;
+    };
+  </script>
+</head>
+<body>
+  <p>잠시만 기다려주세요... 네이버로 이동 중입니다.</p>
+</body>
+</html>
